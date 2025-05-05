@@ -21,6 +21,7 @@ header {
 /* Estilização do nav */
 .navbar {
     padding: 20px;
+    position: fixed;
 }
 
 .nav-links {
