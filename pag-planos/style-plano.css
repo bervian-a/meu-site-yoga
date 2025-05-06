@@ -1,0 +1,42 @@
+/*ajustes de paginas anexas*/
+.redes {
+    margin-top: -100px;
+  }
+
+.home-image {
+  margin-top: -100px;
+}
+
+.prices {
+  flex: 1;
+  margin-right: 10rem;
+  padding: 5px;
+}
+
+/*estilização pagina planos*/
+
+#planos {
+  text-align: center;
+  margin-top: -40px;
+}
+  
+.nomePlano {
+    font-weight: 700;
+}  
+  
+.pricing {
+    list-style: none;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+  
+.pricing li {
+    background: #fcfcc2;
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 600px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 8px 10px rgba(60, 60, 50, 0.6);
+}

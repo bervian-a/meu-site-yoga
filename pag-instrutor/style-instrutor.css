@@ -1,0 +1,66 @@
+.redes {
+  margin-top: -100px;
+}
+
+/*estilização instrutor*/
+.instrutor {
+  display: flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-around;
+  gap: 40px;
+  padding: 10px 10px;
+  background-color: #fdfdda;
+}
+
+.instrutor-text {
+  flex: 1;
+  max-width: 600px;
+  text-align: justify;
+}
+
+.instrutor-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #efa51c;
+  font-weight: 600;
+}
+
+.instrutor-img {
+  flex: 1;
+  max-width: 450px;
+}
+
+.instrutor-img img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow (5px 5px 5px #111)
+}
+
+/*galeria instrutor*/
+.galeria-instrutor-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+
+}
+
+.galeria-instrutor {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items:center;
+  justify-content:space-around;
+
+}
+
+.prof-img img {
+width: 170px;
+padding: 10px;
+object-fit: cover;
+border-radius: 20%;
+}
+
+.sectionInstrutor {
+  text-align: center;
+}

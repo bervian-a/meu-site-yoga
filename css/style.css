@@ -1,23 +1,13 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html {
-    margin: 10px;
-    scroll-behavior: smooth;
+.html {
+  scroll-behavior: smooth;
 }
 
-/* Estilização do header */
-header {
-    background: #fcfcc2;
-    border-bottom: 1px solid #ddd;
-    
-    top: 0;
-    z-index: 10;
-}
-/*estilização do body*/
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -25,95 +15,151 @@ body {
   color: #333;
   margin: 0;
   padding-top: 50px;
-  overflow-x: hidden; /*travar largura, para evitar que galeria expanda a pagina*/
+  overflow-x: hidden;
 }
 
-.conteudo {
-  margin: 0 15px;
-}
-
-h2 {
-  font-size: 30px;
-  font-family: "Quicksand", Helvetica,  sans-serif;
-  font-weight: 600;
-  font-style: italic;
-  margin: 30px 0 15px 15px;
-  text-align: center;
-}
-
-/* Estilização do nav */
 .navbar {
-  padding: 0px;
-  top: 0;
-  margin-left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+  padding: 0 30px;
   width: 100%;
   position: fixed;
+  top: 0;
   background-color: #fcfcc2;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.nav-links {
-  max-width: 1200px;
-  margin: auto;
+.navbar-container {
   display: flex;
-  justify-content: space-between;
+  align-items: center;  
+  gap: 20px;  
+}
+
+.nav-left {
+  display: flex;
   align-items: center;
+  gap: 20px;
+  height: 100%;
 }
 
-.nav-links {
-  margin-right: 90px;
-  list-style: none;
+.logo img {
+  height: 70px;
+  margin-left: 30px;
+  display: block;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
   display: flex;
-  gap: 10px;
+  align-items: center;
+  height: 70px;
+}
+
+.icon-menu {
+  width: 32px;
+  height: 32px;
+  stroke: #333;
+}
+
+/* Links da navegação */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
   transition: color 0.3s;
+  font-weight: 600;
 }
 
 .nav-links a:hover {
   color: #ff6f00cd;
 }
 
-.logo {
-    font-size: 80px;
-    font-family: "Quicksand", Helvetica,  sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    margin-left: 20px;
+/*menu lateral*/
+.menu-lateral {
+  position: fixed;
+  top: 120px; /*margem de onde o menu aparece quando visisvel*/
+  left: 0;
+  width: 100%;
+  background-color: #fffde7;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: height 0.3s ease;
+  z-index: 1001;
+  overflow: hidden;
+  height: 0;
 }
 
-.subtitle {
-  font-size: 20px;
+.menu-lateral.ativo {
+  transform: translateX(0);
+}
+
+/* Menu aberto */
+.menu-lateral.open {
+  height: 200px;
+}
+
+.menu-lateral-itens {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-lateral-itens li {
+  padding: 10px;
+  text-align: center;
+}
+
+.menu-lateral-itens li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+  font-weight: 600;
+}
+
+/*corpo da pagina*/
+section {
+  margin-bottom: 60px;
+  padding-top: 120px;  /* Ajustar de acordo com a altura do navbar */
+  margin-top: -120px;
+}
+
+h2 {
+  font-size: 4rem;
   font-family: "Quicksand", Helvetica,  sans-serif;
-  font-weight: 30;
+  font-weight: 600;
   font-style: italic;
-  margin-bottom: 10px;
-  margin-left: 60px;
-  margin-top: -22px;
+  margin: 30px 0 15px 15px;
+  text-align: center;
 }
-
 /* Estilização da seção "home" */
 .home {
     min-height: calc(100vh - 60px); /* Reduz a altura para não cobrir o header */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fcfcc2;
-    padding-top: 100px;
+    background-color: #fdfdda;
+    padding-top: 200px; /*maior espaçametno superior para cobrir demais ajustes*/
 }
 
 .home-image {
     flex: 1;
     padding-right: 10px;
-    max-width: 70%;
+    max-width: 50%;
 }
 
 .home-image img {
-    width: 70%;
+    width: 80%;
     height: auto;
     object-fit: cover;
     border-radius: 2px;
@@ -121,24 +167,20 @@ h2 {
 
 .home-text {
     flex: 1;
-    padding-left: 10px;
-    margin-right: 10px;
+    margin-right: 10rem;
     padding: 5px;
-    border-radius: 8px;
-    word-wrap: break-word;
 }
 
-.home-text h1 {
-    font-size: 2.5rem;
+.home-text h2 {
+    font-size: 3rem;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .home-text p {
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: #555;
     text-align: justify;
-    overflow-wrap: break-word;
 }
 
 #reduzirTamanhoTexto {
@@ -153,28 +195,24 @@ h2 {
   flex-wrap:wrap;
   align-items:center;
   justify-content:space-around;
-  gap: 40px;
-  padding: 10px 10px;
-  background-color: #fdfdda;
 }
 
 .sobre-text {
   flex: 1;
   max-width: 600px;
   text-align: justify;
+  font-size: 1.3rem;
 }
 
 .sobre-img {
   flex: 1;
-  max-width: 350px;
+  max-width: 600px;
 }
 
 .sobre-img img {
   width: 100%;
   height: auto;
-  object-fit: cover;
-  border-radius: 30%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow (5px 5px 5px #111);
 }
 
 /*estilização instrutora*/
@@ -209,34 +247,62 @@ h2 {
 .instrutor-img img {
   width: 100%;
   height: auto;
-  object-fit: cover;
-  border-radius: 60%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow (5px 5px 5px #111)
 }
 
+/*galeria instrutor*/
+.galeria-instrutor-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+
+}
+
+.galeria-instrutor {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items:center;
+  justify-content:space-around;
+
+}
+
+.prof-img img {
+width: 170px;
+padding: 10px;
+object-fit: cover;
+border-radius: 20%;
+}
+
+.sectionInstrutor {
+  text-align: center;
+}
 
 /*estilização gallery*/ 
+
 .gallery-item-container {
-    overflow: hidden; /* Oculta as imagens que estão fora da área visível */
-    width: 100%; /* Define a largura do container para 100% */
+    overflow: hidden;
+    width: 100%;
     position: relative;
 }
 
 .gallery-item {
     margin-top: 10px;
     margin-bottom: 20px;
-    display: flex; /* Flexbox organiza as imagens em linha */
+    display: flex;
     animation: scroll 15s linear infinite; /* Animação de rolagem contínua - alterar tempo em s */
 }
 
 .gallery img {
-    width: 300px;
-    margin-right: 80px;
+  width: 300px;
+  margin-right: 80px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 @keyframes scroll {
     0% {
-        transform: translateX(0); /* Começa na posição original */
+        transform: translateX(0);
     }
     100% {
         transform: translateX(-100%); /* Move as imagens para a esquerda */
@@ -244,7 +310,9 @@ h2 {
 }
 
 .depoimentos {
+  margin-top: 10px;
   padding: 40px 20px;
+  text-align: center;
 }
 
 .depoimentos-item {
@@ -286,57 +354,79 @@ h2 {
 
 /*fim da estilização gallery/depoimentos*/
 
-  /*estilização de planos*/
-.pricing {
-    list-style: none;
-    padding: 10px;
-    text-align: center;
-    justify-content: center;
-  }
-  
-.pricing li {
-    background: #f8f8b5;
-    margin: 10px auto;
-    padding: 10px;
-    max-width: 600px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(248, 248, 181, 0.6);
-  }
+/*scroll de paginas*/
+.escondido {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
 
-#planos {
+.aparecer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*REDES SOCIAIS*/
+.redes {
+  margin-top: 3rem;
   text-align: center;
 }
 
-.nomePlano {
-  font-weight: 700;
+.redes h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #efa51c;
+  font-weight: 600;
 }
 
-  /*FORMULARIO DE ENVIO DE EMAIL - AJUSTAR FUTURAMENTE*/
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    max-width: 400px;
-    margin: 5px auto 0;
-  }
-  
-  input, textarea {
-    padding: 1px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 11px;
-  }
-  
-  
+.redesocial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+/* Estilo para cada botão */
+.botao {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.5s ease;
+  font-size: 35px;
+}
+
+/*Instagram */
+.botao.ig {
+  background-color: #E1306C;
+}
+
+.botao.ig:hover {
+  background-color: #c42d5c;
+}
+
+/* YouTube */
+.botao.yt {
+  background-color: #FF0000;
+}
+
+.botao.yt:hover {
+  background-color: #CC0000;
+}
+
 
   /*rodapé*/
   footer {
     text-align: center;
     padding: 5px;
-    margin-top: 8px;
+    margin-top: 10px;
   }
-  /*FIM FORMULARIO DE ENVIO DE EMAIL - AJUSTAR FUTURAMENTE*/
+
 
 /*estilização botão para contato*/
 .botaoContato {
@@ -345,43 +435,74 @@ h2 {
   font-size: 1.2rem;
   font-weight: bold;
   background-color: #ffc579;
-  color: #5a2600; /* marrom escuro pro contraste */
+  color: #5a2600;
   border: none;
   border-radius: 25px;
   cursor: pointer;
   text-decoration: none;
   box-shadow: 0 8px 20px rgba(255, 197, 121, 0.4);
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  transition: transform 0.5s ease, background-color 0.3s ease;
   margin: 15px;
 }
-  
+
+.botaoPlano {
+  display: inline-block;
+  padding: 18px 36px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #ffc579;
+  color: #5a2600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(255, 197, 121, 0.4);
+  transition: transform 0.5s ease, background-color 0.3s ease;
+  margin: 15px;
+}
 
 .botaoContato:hover {
   background-color: #f5b85a;
   transform: scale(1.05);
 }
 
+.avisoembreve {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 9999;
+}
 
-  /*estilização botão whatsapp*/
-  .btn-whatsapp {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 20px;
-    background-color: #d3c725;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-  }
-  
-  .btn-whatsapp:hover {
-    background-color: #dbe6a8;
-  }
-  
-  .btn-whatsapp .icon {
-    flex-shrink: 0;
-  }
-  /*fim da estilização botão whatsapp*/
+.avisoembreve.aparecer {
+  opacity: 1;
+}
+
+.avisoenviado {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 12px 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 1000;
+}
+
+.avisoenviado.visivel {
+  opacity: 1;
+}

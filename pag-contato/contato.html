@@ -5,72 +5,102 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yoga para pessoas reais</title>
-    <link rel="stylesheet" href="style-contato.css" />
+    <title>Yoga Aline</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/pag-contato/style-contato.css" />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 
 <body>
-        <!-- Navbar Superior -->
     <nav class="navbar">
-        <div class="navbar-content">
-            <span class="logo">Hatha Yoga!</span>
-            <div class="subtitle">by Aline Bervian</div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#instrutor">Instrutora</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#planos">Planos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
+      <div class="navbar-container">
+          <a href="/" class="logo">
+            <img src="/img/logo.png" alt="Logo Yoga por Aline">
+          </a>
+
+          <button id="menuToggle" class="menu-toggle">
+            <svg class="icon-menu" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+
         </div>
+          <ul class="nav-links">
+                <li><a href="/index.html#sobre">Sobre</a></li>
+                <li><a href="/pag-planos/planos.html">Planos</a></li>
+          </ul>
     </nav>
 
-    <section id="inicio" class="home">
-      <div class="home-image">
-        <img src="yogainicio.png" alt="Convite a pratica de yoga" />
-      </div>
-      <div class="home-text">
-        <p> <em>Força, flexibilidade, equilibrio e consciência</em>. No seu tempo!</p>
-        <p>Se você está buscando desafio consciente, busca olhar pra dentro e evolução.</p>
-      </div>
+    <!-- Botão Explorar -->
+    <div id="sideMenu" class="menu-lateral">
+      <ul class="menu-lateral-itens">
+        <li><a id="instrutor" href="/pag-instrutor/instrutor.html">Instrutor</a></li>
+        <li><a id="galeria" href="/index.html#depoimentos">Depoimentos</a></li>
+        <li><a id = "blog" href="#blog">Blog</a></li>
+        <li><a id= "videoaulas" href="#videoaulas">Videoaulas</a></li>
+      </ul>
+    </div>
 
-    </section>
-    <aside class="email">
-      <form action="https://formspree.io/f/SEU_ENDPOINT" method="POST">
-        <input type="text" name="nome" placeholder="Seu nome">
-        <input type="email" name="email" placeholder="Seu e-mail">
-        <textarea name="mensagem" placeholder="Sua mensagem"></textarea>
-        <button class="botaoenviar" type="submit">Enviar</button>
-      </form>
-    </aside>
+    <div class = "conteudo">
+      <section id="inicio" class="home">
+        <div class="home-image">
+          <img src="/img/yogainicio.png" alt="Convite a pratica de yoga" />
+        </div>
+        <div id="contato" class="contact">
+          <div class="email">
+            <h2>Contato</h2>
+            <form action="https://formsubmit.co/abbervian@gmail.com" method="POST">
+              <input type="text" class="textoform" name="nome" placeholder="Seu nome" required>
+              <input type="email" class="textoform" name="email" placeholder="Seu e-mail" required>
+              <textarea class="textoform" name="mensagem" placeholder="Se ficou com alguma dúvida manda pra gente 💫" required></textarea>
+              <button class="botaoenviar" type="submit">Enviar</button>
+              
+              <script>
+                const form = document.querySelector('form');
+                form.addEventListener('submit', () => {
+                  localStorage.setItem('formEnviado', 'true');
+                });
+              </script>
 
-    <section id="contato" class="contact">
-        <h2>Contato</h2>
-        <p>Estou pronto(a) para novos desafios!</p>
-        <a href="https://wa.me/5551995538733?text=%E2%9C%A8%20Ol%C3%A1,%20%0AGostaria%20de%20agendar%20uma%20pr%C3%A1tica%20de%20Hatha%20Yoga%20%F0%9F%A7%98%E2%80%8D%E2%99%80%EF%B8%8F%20%F0%9F%A4%B8%F0%9F%8F%BC%E2%80%8D%E2%99%80%EF%B8%8F%0ATenho%20disponibilidade%20nos%20seguintes%20dias/%20hor%C3%A1rios:" target="_blank" class="btn-whatsapp">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 32 32" width="20" height="20" fill="white">
-                 <path d="M16.004 2.002C8.822 2.002 2.94 7.896 2.94 15.094c0 2.656.716 5.15 2.024 7.352L2.03 30l7.705-2.02c2.15 1.18 4.6 1.85 7.27 1.85 7.18 0 13.062-5.892 13.062-13.09S23.183 2.002 16.004 2.002zm0 2.276c6.003 0 10.78 4.79 10.78 10.816 0 6.026-4.777 10.815-10.78 10.815-2.23 0-4.29-.688-5.992-1.856l-.422-.276-4.564 1.198 1.207-4.498-.275-.444a10.741 10.741 0 01-1.677-5.94c0-6.026 4.777-10.815 10.78-10.815zM10.86 9.49c-.27-.606-.55-.62-.802-.63-.207-.01-.442-.01-.677-.01-.235 0-.617.088-.94.44-.322.352-1.234 1.207-1.234 2.945 0 1.737 1.265 3.417 1.44 3.653.176.236 2.435 3.897 6.013 5.306 2.974 1.17 3.56.936 4.202.88.64-.06 2.094-.854 2.39-1.678.294-.824.294-1.532.206-1.677-.09-.146-.33-.236-.693-.412-.362-.177-2.14-1.053-2.47-1.172-.33-.118-.572-.177-.812.177-.24.353-.93 1.173-1.14 1.415-.207.236-.422.265-.784.09-.36-.177-1.52-.562-2.9-1.79-1.07-.955-1.79-2.133-2-2.49-.21-.354-.022-.547.157-.724.162-.16.36-.412.54-.618.18-.206.24-.353.36-.588.12-.236.06-.442-.03-.617-.09-.176-.792-1.953-1.113-2.66z"/>
-            </svg>
-            <span>Agendar via whatsapp:</span>
-        </a>
-
-       <!---ADICIONAR COM JS PARA REDIRECIONAR AO MEU EMAIL-->
-        <!--- <form>
-          <input type="text" placeholder="Seu nome" required />
-          <input type="email" placeholder="Seu e-mail" required />
-          <textarea placeholder="Sua mensagem" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>-->
-    </section>
+              <input type="hidden" name="_next" value="http://127.0.0.1:5500/pag-contato/contato.html">
+              <input type="hidden" name="_captcha" value="false">
+            </form>
+            </div>
+            <div class="textocontato">
+            <p>Estou pronto(a) para novos desafios!</p>
+            <a href="https://wa.me/5551995538733?text=%E2%9C%A8%20Ol%C3%A1,%20%0AGostaria%20de%20agendar%20uma%20pr%C3%A1tica%20de%20Hatha%20Yoga%20%F0%9F%A7%98%E2%80%8D%E2%99%80%EF%B8%8F%20%F0%9F%A4%B8%F0%9F%8F%BC%E2%80%8D%E2%99%80%EF%B8%8F%0ATenho%20disponibilidade%20nos%20seguintes%20dias/%20hor%C3%A1rios:" target="_blank" class="btn-whatsapp">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 32 32" width="20" height="20" fill="white">
+                     <path d="M16.004 2.002C8.822 2.002 2.94 7.896 2.94 15.094c0 2.656.716 5.15 2.024 7.352L2.03 30l7.705-2.02c2.15 1.18 4.6 1.85 7.27 1.85 7.18 0 13.062-5.892 13.062-13.09S23.183 2.002 16.004 2.002zm0 2.276c6.003 0 10.78 4.79 10.78 10.816 0 6.026-4.777 10.815-10.78 10.815-2.23 0-4.29-.688-5.992-1.856l-.422-.276-4.564 1.198 1.207-4.498-.275-.444a10.741 10.741 0 01-1.677-5.94c0-6.026 4.777-10.815 10.78-10.815zM10.86 9.49c-.27-.606-.55-.62-.802-.63-.207-.01-.442-.01-.677-.01-.235 0-.617.088-.94.44-.322.352-1.234 1.207-1.234 2.945 0 1.737 1.265 3.417 1.44 3.653.176.236 2.435 3.897 6.013 5.306 2.974 1.17 3.56.936 4.202.88.64-.06 2.094-.854 2.39-1.678.294-.824.294-1.532.206-1.677-.09-.146-.33-.236-.693-.412-.362-.177-2.14-1.053-2.47-1.172-.33-.118-.572-.177-.812.177-.24.353-.93 1.173-1.14 1.415-.207.236-.422.265-.784.09-.36-.177-1.52-.562-2.9-1.79-1.07-.955-1.79-2.133-2-2.49-.21-.354-.022-.547.157-.724.162-.16.36-.412.54-.618.18-.206.24-.353.36-.588.12-.236.06-.442-.03-.617-.09-.176-.792-1.953-1.113-2.66z"/>
+                </svg>
+                <span>Agendar via whatsapp</span>
+              </a>
+            </div>
+          </div>
+        
+        </div>
+        </section>   
+    </div>
     
+    <section class="redes">
+      <h3>Yoga Aline nas redes</h3>
+      <p>Acompanhe a gente nas redes sociais</p>
+      <div class="redesocial">
+        <a href="https://www.instagram.com/bervianaline" target="_blank" class="botao ig">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/@alinebervian7246" target="_blank" class="botao yt">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </section>
+
     <footer>
-        <p>&copy; 2025 • <img src=github.png style="height: 1em; vertical-align: middle;"/>  Bervian-a</p>
+        <p> © 2025 • Todos direitos reservados • <img src=/img/github.png style="height: 1em; vertical-align: middle;"/>  Bervian-a</p>
     </footer>
 
-
-    <script src="js/script.js"></script>
+    <script src="/js/script.js" defer></script>
     </body>
-    </html>
+  </html>

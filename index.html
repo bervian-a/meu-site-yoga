@@ -5,29 +5,45 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yoga para pessoas reais</title>
+    <title>Yoga Aline</title>
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 
 <body>
-        <!-- Navbar Superior -->
     <nav class="navbar">
-        <div class="navbar-content">
-            <span class="logo">Yoga!</span>
-            <div class="subtitle">por Aline</div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#instrutor">Instrutora</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#planos">Planos</a></li>
-                <li><a href="/pag-contato/contato.html">Contato</a></li>
-            </ul>
+      <div class="navbar-container">
+          <a href="/" class="logo">
+            <img src="/img/logo.png" alt="Logo Yoga por Aline">
+          </a>
+
+          <button id="menuToggle" class="menu-toggle">
+            <svg class="icon-menu" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+
         </div>
+          <ul class="nav-links">
+            <li><a href="/index.html#sobre">Sobre</a></li>
+            <li><a href="/pag-planos/planos.html">Planos</a></li>
+            <li><a href="/pag-contato/contato.html">Contato</a></li>
+          </ul>
     </nav>
-   
+
+    <!-- Botão Explorar -->
+    <div id="sideMenu" class="menu-lateral">
+      <ul class="menu-lateral-itens">
+        <li><a id="instrutor" href="/pag-instrutor/instrutor.html">Instrutor</a></li>
+        <li><a id="galeria" href="/index.html#depoimentos">Depoimentos</a></li>
+        <li><a id = "blog" href="#blog">Blog</a></li>
+        <li><a id= "videoaulas" href="#videoaulas">Videoaulas</a></li>
+      </ul>
+    </div>
+
     <div class = "conteudo">
       <section id="inicio" class="home">
         <div class="home-image">
@@ -42,43 +58,30 @@
         </div>
         </section>
       
-        <section id="sobre" class="about">
-          <div class=sobre-text>
+        <section id = "sobre" class="sobre">
+          <div class = "sobre-text">
             <h2>Sobre</h2>
             <p>Hatha Yoga é a união entre corpo, mente e respiração.</p>
             <p>Uma prática que fortalece, alonga e acalma — tudo ao mesmo tempo. Através de posturas (<em>ásanas</em>), técnicas de respiração (<em>pránáyáma</em>) e momentos de silêncio, ela convida você a desacelerar e se reconectar com o que realmente importa: você mesmo(a).
               É a base sólida para quem quer começar no yoga e um caminho profundo para quem deseja ir além.</p>
             <p>Se você busca melhorar dores musculares, relaxar a mente, fazer algo novo, aumentar sua flexibilidade ou até fazer algum exercício físico em meio ao dia a dia frenético: você está no lugar certo! </p>
           </div>
-          <div class="sobre-img">
-            <img src="/img/sobre.jpg" alt="sobre yoga" />
+          <div class = "sobre-img">
+            <img src="/img/sobre.png" alt="sobre yoga" />
           </div>
-        </section>
-
-        <section id="instrutor" class="instrutor">
-          <div class="instrutor-text">
-            <h2>Instrutora</h2>
-            <h3> Aline Bervian</h3>
-            <p>A Hatha Yoga faz parte da minha vida há mais de 3 anos. São mais de mil práticas, respirações conscientes e evoluções. </p>
-            <p>Muito prazer, sou a Aline, formada em medicina veterinária e atualmente migrando para a área da programação. A Yoga entrou na minha vida quando busquei por alguma forma de manter meu corpo em boa forma em meio ao caos caótico do meu dia a dia: na época, eu trabalhava de fazenda em fazenda, meu carro se tornou minha casa e a estrada era minha única certeza.</p>
-            <br>
-            <p>Recentemente, decidi aceitar que meu ciclo profissional na veterinária estava cumprido e que havia outro propósito para a minha vida. Me dediquei ao estudo da programação onde busco auxiliar o mundo através da tecnologia.</p>
-            <p>Parece antagonico que no meio disso a Yoga tenha se transbordado em mim e eu tenha iniciado também a orientar outras pessoas nessa prática maravilhosa. Mas é justamente por isso que eu gosto de dizer que trago a hatha yoga para pessoas reais.</p>
-            <br>
-            <p><em>Minha luz e eneregia estão à disposição para te guiar também!</em></p>
-          </div>
-          <div class="instrutor-img">
-            <img src="/img/intrutor-aline.jpg" alt="instrutor yoga" />
-          </div>
-        </section>
+        </section>            
       
         <section id="galeria" class="gallery">
-          <h2>Galeria</h2>
           <div class="gallery-item">
             <div class="gallery-img"> <img src="img/galeriagrupo.png" alt="Pratica presencial em grupo" /></div>
             <div class="gallery-img"> <img src="img/galeriaIndividualPresencial.png" alt="Pratica presencial individual" /></div>
             <div class="gallery-img"> <img src="img/galeriaIndividualOnline.png" alt="Pratica online individual" /></div>
             <div class="gallery-img"> <img src="img/galeriaIndividualOnline1.png" alt="Pratica online individual" /></div>
+            <div class="gallery-img"> <img src="img/galeria1.jpeg" alt="Pratica" /></div>
+            <div class="gallery-img"> <img src="img/galeria2.jpg" alt="Pratica" /></div>
+            <div class="gallery-img"> <img src="img/galeria3.jpg" alt="Pratica" /></div>
+            <div class="gallery-img"> <img src="img/galeria4.jpg" alt="Pratica" /></div>
+            <div class="gallery-img"> <img src="img/galeria5.jpg" alt="Pratica" /></div>
           </div>
         </section>
 
@@ -103,36 +106,27 @@
               <p>"Sempre fui da musculação, mas sentia que faltava algo — vivia com dor nas costas e a cabeça a mil. Comecei o yoga com a Aline achando que seria tranquilo demais pra mim… e me enganei! É um desafio físico e mental. Me sinto mais forte, mais focada e com muito mais consciência corporal. Recomendo pra qualquer um que acha que 'yoga não é pra mim'."</p>
             </div>
           </div>
-        </section>
-      
-        <section id="planos" class="prices">
-          <h2>Planos</h2>
-          <ul class="pricing">
-            <li>
-              <p class="nomePlano"> Aula Avulsa (Online - Individual)</p>
-              <p> 🖥️ R$ 50,00 por aula </p></li>
-            <li>
-              <p class="nomePlano">Plano Mensal (Online - Individual)</p>
-              <p> 🖥️ 1 aula por semana - R$ 180,00/mês</p></li>
-            <li>
-              <p class="nomePlano">Plano Mensal (Presencial - Individual)</p>
-              <p> 🏠 1 aula por semana - R$ 200,00/mês</p></li>
-            <li>
-              <p class="nomePlano">Plano Mensal  (Presencial - Grupo até 4 pessoas)</p>
-              <p> 🏠 1 aula por semana - R$ 180,00/mês</p></li>
-          </ul>
-          <p>As aulas tem duração aproximada de 1 hora!</p>
-          <p id="reduzirTamanhoTexto">*Aulas presenciais: confirme disponibilidade (Nova Lima e Belo Horizonte/MG)</p>
-          <p>Estou pronto(a) para novos desafios!</p>
           <a href="/pag-contato/contato.html" class="botaoContato">Quero fazer parte!</a>
         </section>
     </div>
 
-      <footer>
-        <p>&copy; 2025 • <img src=img/github.png style="height: 1em; vertical-align: middle;"/>  Bervian-a</p>
-      </footer>
+    <section class="redes">
+      <h3>Yoga Aline nas redes</h3>
+      <p>Acompanhe a gente nas redes sociais</p>
+      <div class="redesocial">
+        <a href="https://www.instagram.com/bervianaline" target="_blank" class="botao ig">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/@alinebervian7246" target="_blank" class="botao yt">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </section>
 
+    <footer>
+        <p> © 2025 • Todos direitos reservados • <img src=/img/github.png style="height: 1em; vertical-align: middle;"/>  Bervian-a</p>
+    </footer>
 
-    <script src="js/script.js"></script>
+    <script src="/js/script.js" defer></script>
     </body>
-    </html>
+  </html>

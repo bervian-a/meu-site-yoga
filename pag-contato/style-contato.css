@@ -1,253 +1,96 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    margin: 10px;
-}
-
-
-/* Estilização do header */
-header {
-    background: #fcfcc2;
-    border-bottom: 1px solid #ddd;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-/* Estilização do nav */
-.navbar {
-    padding: 20px;
-    position: fixed;
-}
-
-.nav-links {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-    font-size: 50px;
-    font-family: "Quicksand", Helvetica,  sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    margin-left: 20px;
-}
-
-.subtitle {
-  font-size: 30px;
-  font-family: "Quicksand", Helvetica,  sans-serif;
-  font-weight: 50;
-  font-style: italic;
-  margin-bottom: 10px;
-  margin-left: 50px;
-  margin-top: -25px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #ff6f00cd;
-}
-
-/* Estilização da seção "home" */
-
-.home {
-    min-height: calc(100vh - 60px); /* Reduz a altura para não cobrir o header */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fcfcc2;
+/*ajustes de paginas anexas*/
+.redes {
+  margin-top: -100px;
 }
 
 .home-image {
-    flex: 1;
-    padding-right: 10px;
-    max-width: 80%;
+margin-top: 0px;
 }
 
-.home-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
+.contact {
+  flex: 1;
+  margin-right: 10rem;
+  padding: 5px;
 }
 
-.home-text {
-    flex: 1;
-    padding-left: 20px;
-    margin-right: 40px;
-    padding: 20px;
-    border-radius: 8px;
-    word-wrap: break-word;
+/*estilização pagina contato*/
+/* Estilização do formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.home-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
+input, textarea {
+  padding: 10px;
+  border: 1px solid #fed5987b;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
-.home-text p {
-    font-size: 1rem;
-    color: #555;
-    text-align: justify;
-    overflow-wrap: break-word;
-}
-  
-
-  #reduzirTamanhoTexto {
-    font-size: smaller;
-    font-style: italic;
-  }
-/*fim da estilização da pagina inicio*/  
-  
-/*inicio estilização body*/
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: hsl(60, 91%, 87%);
-  color: #333;
-  margin: 0 15px;
+.textocontato {
+  text-align: center;
+  padding: 10px;
 }
 
-h2 {
-  font-size: 30px;
-  font-family: "Quicksand", Helvetica,  sans-serif;
-  font-weight: 600;
-  font-style: italic;
-  margin: 30px 0 15px 15px;
+.textocontato p {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-/*fim estilização body*/
-
-/*estilização gallery*/ 
-.gallery-item-container {
-    overflow: hidden; /* Oculta as imagens que estão fora da área visível */
-    width: 100%; /* Define a largura do container para 100% */
-    position: relative;
+.textoform {
+  font-family:  'Quicksand', sans-serif;
+  text-align: center;
 }
 
-.gallery-item {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    display: flex; /* Flexbox organiza as imagens em linha */
-    animation: scroll 15s linear infinite; /* Animação de rolagem contínua - alterar tempo em s */
+.botaoenviar {
+  padding: 1rem;
+  height: auto;
+  width: 15rem;
+  display: block;
+  margin: 0 auto;
+
+  font-family:  'Quicksand', sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #dbe6a8;
+  color: #5a2600;
+  border: none;
+  border-radius: 25px;
+  transition: transform 0.5s ease, background-color 0.3s ease;
 }
 
-.gallery img {
-    width: 300px;
-    margin-right: 80px;
+.botaoenviar:hover {
+  background-color: #f5b85a;
+  transform: scale(1.05);
 }
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0); /* Começa na posição original */
-    }
-    100% {
-        transform: translateX(-100%); /* Move as imagens para a esquerda */
-    }
-}
-
-/*fim da estilização gallery*/
-
-  /*estilização de planos*/
-.pricing {
-    list-style: none;
-    padding: 10px;
-    text-align: center;
-    justify-content: center;
-  }
-  
-.pricing li {
-    background: #f8f8b5;
-    margin: 10px auto;
-    
-    padding: 10px;
-    max-width: 600px;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-.nomePlano {
-  font-weight: 700;
-}
-
-  /*FORMULARIO DE ENVIO DE EMAIL - AJUSTAR FUTURAMENTE*/
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    max-width: 400px;
-    margin: 5px auto 0;
-  }
-  
-  input, textarea {
-    padding: 1px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 11px;
-  }
-  
-  button {
-    padding: 1px;
-    background: #4c4f4c;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background: #ff6f00cd;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 5px;
-    background: #eee;
-    margin-top: 8px;
-  }
   /*FIM FORMULARIO DE ENVIO DE EMAIL - AJUSTAR FUTURAMENTE*/
 
   /*estilização botão whatsapp*/
-
   .btn-whatsapp {
     display: inline-flex;
     align-items: center;
     gap: 10px;
     padding: 12px 20px;
-    background-color: #d3c725;
-    color: white;
+    background-color: #ffc579;
+    color: rgb(30, 27, 27);
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
     font-size: 16px;
   }
   
   .btn-whatsapp:hover {
     background-color: #dbe6a8;
+    transform: scale(1.05);
   }
   
   .btn-whatsapp .icon {
     flex-shrink: 0;
+    color: rgb(30, 25, 25);
+    text-align: center;
   }
   /*fim da estilização botão whatsapp*/
