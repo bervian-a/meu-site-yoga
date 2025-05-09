@@ -1,23 +1,22 @@
 /*ajustes de paginas anexas*/
 .redes {
-    margin-top: -100px;
+    margin-top: -1em;
   }
 
 .home-image {
-  margin-top: -100px;
+  margin-top: -3em;
 }
 
 .prices {
   flex: 1;
   margin-right: 10rem;
-  padding: 5px;
 }
 
 /*estilização pagina planos*/
 
 #planos {
   text-align: center;
-  margin-top: -40px;
+  margin-top: -2em;
 }
   
 .nomePlano {
@@ -26,17 +25,17 @@
   
 .pricing {
     list-style: none;
-    padding: 10px;
+    padding: 1em;
     text-align: center;
     justify-content: center;
 }
   
 .pricing li {
     background: #fcfcc2;
-    margin: 10px auto;
-    padding: 10px;
-    max-width: 600px;
-    border-radius: 8px;
+    margin: 0.5em auto;
+    padding: 0.5em;
+    max-width: 60em;
+    border-radius: 1em;
     text-align: center;
-    box-shadow: 0 8px 10px rgba(60, 60, 50, 0.6);
+    box-shadow: 0 0.5em 0.6em rgba(60, 60, 50, 0.6);
 }
