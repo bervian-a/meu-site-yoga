@@ -103,8 +103,8 @@ border-radius: 20%;
    }
 
   .galeria-instrutor img {
-    width: 150px;
-    margin-right: 15px;
+    width: 15em;
+    margin-right: 0.1em;
     animation: scroll 3s linear infinite;
   }
 
