@@ -93,3 +93,10 @@ input, textarea {
     text-align: center;
   }
   /*fim da estilização botão whatsapp*/
+
+  @media (max-width: 768px) { /* Ajustes para telas menores */
+  .contact {
+    justify-content: center;
+    margin: 1em;
+  }
+}

@@ -1,5 +1,5 @@
 .redes {
-  margin-top: -1em;
+  margin-top: -5em;
 }
 
 /*estilização instrutor*/
@@ -95,9 +95,6 @@ border-radius: 20%;
     width: 100%;
     flex-wrap: nowrap;
     justify-content: flex-start;
-  }
-
-  .galeria-instrutor {
     width: calc(100% * 2);
     animation: scroll 12s linear infinite;
    }

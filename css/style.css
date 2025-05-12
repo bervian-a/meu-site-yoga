@@ -283,29 +283,33 @@ h2 {
   }
 
 
-
 @media (max-width: 768px) { /*AJUSTE PARA RESPONSIVIDADE EM TELAS MENORES (CELULAR)*/
   .home {
-    flex-direction: column-reverse;
-    padding-top: 150px; /* ajuste para compensar navbar */
+    flex-direction: column;
+    margin-top: 50px; /* ajuste para compensar navbar */
+    padding-top: 0px;
     text-align: center;
   }
 
-  .home-image,
-  .home-text {
-    max-width: 100%;
-    padding: 1em;
-    margin: 0;
+  .home-image {
+    max-width:55%;
   }
 
-  .home-text {
-    margin-right: 0;
+  .home-text{
+    max-width: 100%;
+    margin: 0.5em;
   }
 
   .home-text h2,
   .home-text p {
     text-align: center;
   }
+
+  .conteudo {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
 }
 /*fim da estilização da pagina inicio*/  
 
@@ -465,21 +469,8 @@ h2 {
 
 /*fim da estilização gallery/depoimentos*/
 
-/*scroll de paginas*/
-.escondido {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
-}
-
-.aparecer {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /*REDES SOCIAIS*/
 .redes {
-  margin-top: 3rem;
   text-align: center;
 }
 
@@ -495,10 +486,10 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 2em;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
-/* Estilo para cada botão */
+/* Estilo para cada botão rede social*/
 .botao {
   width: 60px;
   height: 60px;
@@ -532,11 +523,21 @@ h2 {
 
 
   /*rodapé*/
-  footer {
+footer {
     text-align: center;
     margin-top: 1em;
+    padding-bottom: 10px;
   }
 
+.meuGit {
+  text-decoration: none;
+  color: #333;
+}
+
+.meuGit:hover {
+  text-decoration: none;
+  color: #6c6a6a;
+}
 
 /*estilização botão para contato*/
 .botaoContato {
