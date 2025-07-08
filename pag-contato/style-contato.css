@@ -39,7 +39,7 @@ input, textarea {
 }
 
 .textoform {
-  font-family:  'Quicksand', sans-serif;
+  font-family:  'Quicksand', Arial, sans-serif;
   text-align: center;
 }
 
@@ -50,11 +50,11 @@ input, textarea {
   display: block;
   margin: 0 auto;
 
-  font-family:  'Quicksand', sans-serif;
+  font-family: 'Quicksand', Arial, sans-serif;
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
-  background-color: #dbe6a8;
+  background-color: #f5b85a;
   color: #5a2600;
   border: none;
   border-radius: 2em;
@@ -62,7 +62,7 @@ input, textarea {
 }
 
 .botaoenviar:hover {
-  background-color: #f5b85a;
+  background-color: #dbe6a8;
   transform: scale(1.05);
 }
   /*FIM FORMULARIO DE ENVIO DE EMAIL - AJUSTAR FUTURAMENTE*/
