@@ -12,8 +12,8 @@
 body {
   font-family: 'Quicksand', Arial, sans-serif;
   line-height: 1.6;
-  background: hsl(0, 0%, 100%);
-  color: #333;
+  background: lab(100% 0.01 -0.01);
+  color: #5f5656;
   margin: 0;
   padding-top: 50px;
   overflow-x: hidden;
@@ -29,7 +29,7 @@ body {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: #ffffd8;
+  background-color: #f2f1f1;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -50,7 +50,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #252525;
   transition: color 0.3s;
   font-weight: 600;
 }
@@ -134,7 +134,7 @@ body {
 .icon-menu {
   width: 3em;
   height: 3em;
-  stroke: #333;
+  stroke: #252525;
 }
 
 .menu-lateral {
@@ -142,7 +142,7 @@ body {
   top: 120px; /*margem de onde o menu aparece quando visisvel*/
   left: 0;
   width: 100%;
-  background-color: #ffffd8;
+  background-color: #f2f1f1;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   transition: height 0.3s ease;
   z-index: 1001;
@@ -172,7 +172,7 @@ body {
 
 .menu-lateral-itens li a {
   text-decoration: none;
-  color: #333;
+  color: #252525;
   transition: color 0.3s;
   font-weight: 600;
 }
@@ -195,7 +195,7 @@ body {
 .icon-menu {
   width: 48px;
   height: 48px;
-  stroke: #333;
+  stroke: #252525;
 }
 
  .menu-lateral {
@@ -204,7 +204,7 @@ body {
     left: 0;
     right: 0;
     transform: translateY(-100%); /* Esconde o menu inicialmente */
-    background-color: #ffffd8;
+    background-color: #f2f1f1;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     z-index: 1001;
@@ -223,9 +223,7 @@ body {
 
 /*corpo da pagina*/
 section {
-  margin-bottom: 60px;
-  padding-top: 120px;  /* Ajustar de acordo com a altura do navbar */
-  margin-top: -120px;
+ scroll-margin-top: 120px;
 }
 
 h2 {
@@ -235,6 +233,7 @@ h2 {
   font-style: italic;
   margin: 30px 0 15px 15px;
   text-align: center;
+  color: #252525
 }
 /* Estilização da seção "home" */
 .home {
@@ -242,8 +241,8 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffffd8;
-    padding-top: 200px; /*maior espaçametno superior para cobrir demais ajustes*/
+    background-color: #f2f1f1;
+    padding-top: 5em; /*maior espaçametno superior para cobrir demais ajustes*/
 }
 
 .home-image {
@@ -269,11 +268,12 @@ h2 {
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: left;
+    color:  #363636
 }
 
 .home-text p {
     font-size: 1rem;
-    color: #555;
+    color: #252525;
     text-align: justify;
 }
 
@@ -319,7 +319,8 @@ h2 {
   flex-wrap:wrap;
   align-items:center;
   justify-content:space-around;
-  margin-bottom: 5rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 
 .sobre-text {
@@ -365,7 +366,7 @@ h2 {
   justify-content:space-around;
   gap: 2em;
   padding: 2em 2em;
-  background-color: #fdfdda;
+  background-color: #f8f8f8;
 }
 
 .instrutor-text {
@@ -377,7 +378,7 @@ h2 {
 .instrutor-text h3 {
   font-size: 1.2rem;
   margin-bottom: 1.5em;
-  color: #393939;
+  color: #252525;
   font-weight: 600;
   text-align: center;
 }
@@ -472,7 +473,6 @@ border-radius: 20%;
 }
 
 
-
 .depoimentos {
   margin-top: 10px;
   padding: 40px 20px;
@@ -491,7 +491,7 @@ border-radius: 20%;
   display: flex;
   align-items: center;
   gap: 20px;
-  background-color: #ffffd8;
+  background-color: #f8f8f8;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -509,7 +509,7 @@ border-radius: 20%;
 /* Texto do depoimento */
 .depoimento-img p {
   font-size: 1rem;
-  color: #333;
+  color: #252525;
   line-height: 1.5;
   text-align: justify;
 }
@@ -534,16 +534,20 @@ border-radius: 20%;
 
 /*fim da estilização gallery/depoimentos*/
 
+
+/*rodapé*/
 /*REDES SOCIAIS*/
 .redes {
   text-align: center;
+  margin: 0;
 }
 
 .redes h3 {
   font-size: 1.2rem;
-  margin-bottom: 1.5em;
-  color: #393939;
+  margin-bottom: 0.5em;
+  color: #252525;
   font-weight: 600;
+  padding-top: 0;
 }
 
 .redesocial {
@@ -551,7 +555,7 @@ border-radius: 20%;
   justify-content: center;
   align-items: center;
   gap: 2em;
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 
 /* Estilo para cada botão rede social*/
@@ -566,6 +570,7 @@ border-radius: 20%;
   text-decoration: none;
   transition: background-color 0.5s ease;
   font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 /*Instagram */
@@ -587,16 +592,15 @@ border-radius: 20%;
 }
 
 
-/*rodapé*/
 footer {
     text-align: center;
-    margin-top: 1em;
-    padding-bottom: 10px;
+    background-color: #f2f1f1;
+    padding-top: 0;
   }
 
 .meuGit {
   text-decoration: none;
-  color: #333;
+  color: #252525;
 }
 
 .meuGit:hover {
@@ -610,7 +614,7 @@ footer {
   padding: 18px 36px;
   font-size: 1.2rem;
   font-weight: bold;
-  background-color: #ffc579;
+  background-color: #b0b590;
   color: #393939;
   border: none;
   border-radius: 25px;
@@ -626,7 +630,7 @@ footer {
   padding: 18px 36px;
   font-size: 1.2rem;
   font-weight: bold;
-  background-color: #ffc579;
+  background-color: #b0b590;
   color: #393939;
   border: none;
   border-radius: 25px;

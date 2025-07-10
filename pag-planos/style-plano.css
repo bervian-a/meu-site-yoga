@@ -1,10 +1,10 @@
 /*ajustes de paginas anexas*/
-.redes {
-    margin-top: -10em;
-  }
-
 .home-image {
   margin-top: 0.5em;
+}
+
+.home {
+    background-color: #ffffff;
 }
 
 .prices {
@@ -31,7 +31,7 @@
 }
   
 .pricing li {
-    background: #fcfcc2;
+    background: #f2f1f1;
     margin: 0.5em auto;
     padding: 0.5em;
     max-width: 60em;
@@ -39,6 +39,7 @@
     text-align: center;
     box-shadow: 0 0.5em 0.6em rgba(60, 60, 50, 0.6);
 }
+
 
 
 @media (max-width: 768px) { /* Ajustes para telas menores */
