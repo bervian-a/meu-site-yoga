@@ -531,7 +531,6 @@ border-radius: 20%;
   }
 }
 
-
 /*fim da estilização gallery/depoimentos*/
 
 
@@ -560,9 +559,9 @@ border-radius: 20%;
 
 /* Estilo para cada botão rede social*/
 .botao {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
   color: white;
   display: flex;
   align-items: center;
@@ -575,7 +574,7 @@ border-radius: 20%;
 
 /*Instagram */
 .botao.ig {
-  background-color: #E1306C;
+  background-color: #2d2d2d;
 }
 
 .botao.ig:hover {
@@ -584,13 +583,21 @@ border-radius: 20%;
 
 /* YouTube */
 .botao.yt {
-  background-color: #FF0000;
+  background-color: #2d2d2d;
 }
 
 .botao.yt:hover {
   background-color: #CC0000;
 }
 
+/* Facebook */
+.botao.fb {
+  background-color: #2d2d2d;
+}
+
+.botao.fb:hover {
+  background-color: #0d65e8;
+}
 
 footer {
     text-align: center;
@@ -626,6 +633,22 @@ footer {
 }
 
 .botaoPlano {
+  display: inline-block;
+  padding: 18px 36px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #b0b590;
+  color: #393939;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(255, 197, 121, 0.4);
+  transition: transform 0.5s ease, background-color 0.3s ease;
+  margin: 15px;
+}
+
+.btn-whatsapp {
   display: inline-block;
   padding: 18px 36px;
   font-size: 1.2rem;
